@@ -1,0 +1,148 @@
+.head {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://treobangron.com.vn/wp-content/uploads/2022/09/background-dep-3-2.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.navbar {
+  width: 100%;
+  height: 8%;
+  display: flex;
+  /* justify-content: space-between; */
+  position: fixed;
+  align-items: center;
+}
+.navbar-left {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 20;
+}
+.left-item {
+  color: white;
+  justify-content: flex-end;
+  padding: 20;
+  border: none;
+  background: none;
+}
+
+.left-item:hover {
+  background-color: #f44336;
+  color: #f4623a;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.navbar-mid {
+  width: 45%;
+}
+.navbar-right {
+  width: 30%;
+  display: flex;
+  align-items: center;
+}
+.li-item {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+}
+.right-item {
+  color: white;
+  padding: 20;
+  border: none;
+  background: none;
+}
+
+.right-item:hover {
+  background-color: #f44336;
+  color: #f4623a;
+  padding: 0;
+  border: none;
+  background: none;
+}
+.head-content {
+  width: 100%;
+  height: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px;
+  background: #f4623a;
+}
+.btn:hover {
+  background-color: #f44336;
+}
+
+.content{
+  width: 100%;
+  height: 350px;
+  background-color: #f4623a;
+  flex-direction: column;
+}
+.content-top{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.btn-content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px;
+  background: #fff;
+}
+.btn-content:hover {
+  background-color: #c2b6b6;
+}
+.description-content{
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.description-title{
+  height: 200px;
+ padding-bottom: 10px;
+ display: flex;
+}
+.li-description{
+  width: 80%;
+  height: 100;
+  display: flex;
+
+}
+.description-item{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
