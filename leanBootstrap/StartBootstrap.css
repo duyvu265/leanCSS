@@ -1,10 +1,12 @@
 html,
 body {
-    margin: 0;
-    padding: 0;
-    font-size: 14px;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
+
 .head {
   width: 100%;
   height: 100vh;
@@ -12,6 +14,7 @@ body {
   background-size: 100%;
   background-repeat: no-repeat;
 }
+
 .navbar {
   width: 100%;
   height: 8%;
@@ -20,20 +23,31 @@ body {
   position: fixed;
   align-items: center;
 }
+
 .navbar-left {
   width: 25%;
   display: flex;
   justify-content: flex-end;
   padding: 20;
 }
+
 .left-item {
-  color: white;
   justify-content: flex-end;
   padding: 20;
   border: none;
   background: none;
 }
-
+.btn-nav {
+  padding: 20;
+  border: none;
+  background: none;
+}
+.btn-nav:hover {
+  background-color: #f44336;
+  color: #f4623a;
+  border: none;
+  background: none;
+}
 .left-item:hover {
   background-color: #f44336;
   color: #f4623a;
@@ -41,33 +55,23 @@ body {
   border: none;
   background: none;
 }
+
 .navbar-mid {
   width: 45%;
 }
+
 .navbar-right {
   width: 30%;
   display: flex;
   align-items: center;
 }
+
 .li-item {
   width: 60%;
   display: flex;
   justify-content: space-around;
 }
-.right-item {
-  color: white;
-  padding: 20;
-  border: none;
-  background: none;
-}
 
-.right-item:hover {
-  background-color: #f44336;
-  color: #f4623a;
-  padding: 0;
-  border: none;
-  background: none;
-}
 .head-content {
   width: 100%;
   height: 94%;
@@ -76,6 +80,7 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .title {
   width: 100%;
   display: flex;
@@ -83,6 +88,7 @@ body {
   align-items: center;
   padding: 50px;
 }
+
 .description {
   width: 50%;
   display: flex;
@@ -90,16 +96,20 @@ body {
   align-items: center;
   padding: 50px;
 }
-.btn {
+
+.btn-head-top {
+  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  border-radius: 25px;
   background: #f4623a;
+  border-radius: 25px;
+  padding: 20px;
 }
-.btn:hover {
-  background-color: #f44336;
+
+.btn-head-top:hover {
+  padding: 20px;
+  background: #c9360d;
 }
 
 .content {
@@ -108,6 +118,7 @@ body {
   flex-direction: column;
   margin: auto;
 }
+
 .content-top {
   width: 100%;
   height: 50vh;
@@ -117,14 +128,19 @@ body {
   flex-direction: column;
   background-color: #f4623a;
 }
+
 .top-title {
   color: #fff;
 }
+
 .top-description {
   width: 50%;
   color: #fff;
 }
+
 .btn-content {
+  border: none;
+  font-size: 30;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -132,9 +148,11 @@ body {
   border-radius: 25px;
   background: #fff;
 }
+
 .btn-content:hover {
   background-color: #c2b6b6;
 }
+
 .description-content {
   width: 100%;
   height: 50vh;
@@ -143,16 +161,19 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
 .description-title {
   height: 200px;
   padding-bottom: 10px;
   display: flex;
 }
+
 .li-description {
   width: 80%;
   height: 100;
   display: flex;
 }
+
 .description-item {
   width: 25%;
   height: 100%;
@@ -162,31 +183,145 @@ body {
   flex-direction: column;
 }
 .project-description {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  background-color: #212529;
-  justify-content: center;
+  margin: auto;
 }
+/* Tạo khung của màn hình hiển thị tối đa là 1920px */
+.container-description {
+  max-width: 1920px;
+}
+
+/* Chia layout sử dụng flex */
 .li-project {
   width: 100%;
-  height: 30%;
-  justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
-  padding: 1px;
- 
+  justify-content: space-between;
+  box-sizing: border-box;
 }
+
+/* Tạo khung ảnh và tạo positon cha*/
 .project-item {
   width: calc(100% / 3);
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Fit ảnh vào khung */
+.size-img {
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+}
+
+/* Tạo hover khi bấm vào từng ảnh để chuyển link áp dụng position con */
+.portfolio-box-caption {
+  width: 100%;
+  height: 230px;
+  background-color: rgba(244, 98, 58, 0.9);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: none;
+}
+
+.project-item:hover .portfolio-box-caption {
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-white {
+  color: rgba(255, 255, 255, 0.658);
+  font-size: 20px;
+}
+
+.text-white2 {
+  color: rgb(255, 255, 255);
+  font-size: 22px;
+}
+.footer {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  height: 50vh;
+  background-color: #363d47;
+}
+.container-footer {
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+.text-bottom {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: aliceblue;
+  width: 100%;
+  font-size: 30px;
+}
+
+.btn-content {
+  min-width: 50px;
+  border: none;
+  background-color: #fff;
+  border-radius: 25px;
+}
+.btn-content:hover {
+  background-color: #ffffff9c;
+}
+.form {
+  width: 100%;
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.form-title {
+  width: 35%;
+  height: 25%;
+  margin: 20px;
+}
+.f-title {
   display: flex;
   align-items: center;
-  flex: 1;
-  background-color: #c2b6b6;
-  
-  
+  justify-content: center;
+  width: 100%;
+  height: 60%;
 }
-.project-item :hover{
-  display: none;
+.f-description {
+  text-align: center;
+  width: 100%;
+  height: 40%;
+  font-size: 17px;
+}
+.form-content {
+  width: 35%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+}
+.f-item {
+  min-height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.textarea {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.f-btn {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4623a;
+  margin-top: 20px;
+  min-height: 50px;
 }
