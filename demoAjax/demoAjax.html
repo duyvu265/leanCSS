@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<body>
+  <!-- 
+Tạo 1 trang HTML với nội dung là 3 đoạn văn. Hãy viết các function có tác dụng như sau:
+-function changeColor(): Đổi màu chữ của 3 đoạn văn theo thứ tự xanh, vàng, đỏ.
+-function changeBgColor(color): Thay đổi màu nền của trang thành màu color.
+-function copyContent(paragraph1, paragraph2): Thay đổi nội dung của đoạn văn paragraph1 thành giống nội dung của đoạn văn paragraph2 (tham số truyền vào là id của 2 đoạn văn hoặc thứ tự của đoạn văn).
+-function changeFontSize(x): Thay đổi kích thước font chữ của cả 3 đoạn văn thành x pixel 
+-->
+  <p id="1">day la đoạn văn 1</p>
+  <p id="2">day la đoạn văn 2</p>
+  <p id="3">day la đoạn văn 3</p>
+  <button type="button" onclick="changeColor()"> changeColor</button>
+  <button type="button" onclick="changeBgColor()">changeBgColor</button>
+  <button type="button" onclick="copyContent()">copyContent</button>
+  <button type="button" onclick="changeFontSize()">changeFontSize</button>
+  <script>
+    let x = document.getElementById("1");
+    let y = document.getElementById("2");
+    let z = document.getElementById("3");
+    function changeColor() {
+      x.style.color = "green";
+      y.style.color = "yellow";
+      z.style.color = "red";
+    }
+    function changeBgColor() {
+      return (document.body.style.backgroundColor = "yellow");
+    }
+    function copyContent() {
+      let idContent1 = prompt("nhap id (vi tri cua doan van)");
+      let idContent2 = prompt("nhap id (vi tri cua doan van)");
+      let x = document.getElementById(idContent1);
+      let y = document.getElementById(idContent2);
+      x.innerHTML = y.innerHTML;
+    }
+    function changeFontSize() {
+      let sizeX = prompt("FontSize 1");
+      let sizeY = prompt("FontSize 2");
+      let sizeZ = prompt("FontSize 3");
+      x.style.fontSize = sizeX + "px";
+      y.style.fontSize = sizeY + "px";
+      z.style.fontSize = sizeZ + "px";
+    }
+  </script>
+</body>
+
+</html>
